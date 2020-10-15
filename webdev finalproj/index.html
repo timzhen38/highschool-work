@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<!-- Tim Zhen -->
+<html>
+	<head>
+		<title></title>
+		<style>
+		body
+		{
+			background-color: gray;
+			font-size: 30px;
+			text-align: center;
+			margin-top: 300px;
+		}
+		
+		div
+		{
+			font-size:100px;
+		}
+		</style>
+		<script>
+			function initialize()
+			{
+				submitButton = document.getElementById("submitbtn");
+			}
+			
+			function changeButton(box)
+			{
+				if (box.checked)
+					submitButton.value = "Register";
+				else
+					submitButton.value = "LogIn";
+			}
+	
+		</script>
+	</head> 
+	<body onload = "initialize();">
+	<form method = "post" action = "userreg.php">
+		<h3> Username: </h3> <input type = "text" name = "username" /> 
+		<br />
+		<h3>Password: </h3> <input type = "text" name = "password" />
+		<br />
+		New User <input onchange = "changeButton(this)" type = "checkbox" name = "newuser" />
+		<br />
+		<div> <input type = "submit" id = "submitbtn" value = "LogIn" /> </div>
+	</form>
+	
+
+	</body>
+</html>
