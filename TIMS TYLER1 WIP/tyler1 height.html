@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<!-- Tim Zhen -->
+<html>
+	<head>
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="tyler1.css">
+		<style> </style>
+		<script>
+			function initialize()
+			{
+				tylerFeet = document.getElementById("ft");
+				tylerInches = document.getElementById("in");
+				MessageWL = document.getElementById("message");
+			}
+			
+			function heightgame()
+			{
+				if (tylerFeet.value == 6 && tylerInches.value == 5)
+					MessageWL.innerHTML = "CORRECT!";
+				else
+					MessageWL.innerHTML = "WRONG!";
+			}
+		</script>
+	</head> 
+	<body onload = "initialize();">
+		<img id = "hmpgbgrnd" src = "orange.jpg" />
+		<div id = "topmenu"> 
+			<a href = "TYLER1 WIP.html"> <span id = "homepg"> Home </span> </a>
+			<a href = "tyler1 links.html"> <span id = "smedia"> Links </span> </a>
+			<a href = "tyler1 FAQ.html"> <span id = "FAQ"> FAQ </span> </a>
+			<a href = "tyler1 about.html"> <span id = "history"> About Tyler1 </span> </a>		
+		</div>
+		<h2 id = "guessheight"> Guess Tyler1's Height! </h2>
+		<input id = "ft" type = "number" /> feet
+		<input id = "in" type = "number" /> inches
+		<button onclick = "heightgame()"> Enter </button>
+		<div id = "message"> </div>
+	</body>
+</html>
